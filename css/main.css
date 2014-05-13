@@ -1,0 +1,139 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:900);
+*, *:before, *:after{
+    box-sizing:border-box;
+}
+body{
+    font-family: 'Lato', sans-serif;
+    background: #f1f1f1;
+}
+.yuri{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 150px;
+    margin: -75px 0 0 -40%;
+    text-align: center;
+}
+.letter{
+    display: inline-block;
+    font-weight: 900;
+    font-size: 8em;
+    margin: 0.1em;
+    position: relative;
+    color: #f12800;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    -o-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    perspective: 400;
+    z-index: 1;
+    cursor: pointer;
+    text-decoration: none;
+}
+.letter.facebook{
+    color: #425f9c;
+}
+.letter.instagram{
+    color: #b6775c;
+}
+.letter.youtube{
+    color: #cc181e;
+}
+.letter.github{
+    color: #333333;
+}
+.letter.flickr{
+    color: #ff0084;
+}
+.letter.twitter{
+    color: #55acee;
+}
+.letter.linkedin{
+    color: #246ba6;
+}
+.letter:before,
+.letter:after{
+    position:absolute;
+    content: attr(data-letter);
+    -webkit-transform-origin: top left;
+    -moz-transform-origin: top left;
+    -ms-transform-origin: top left;
+    -o-transform-origin: top left;
+    transform-origin: top left;
+    top:0;
+    left:0;
+}
+.letter,
+.letter:before,
+.letter:after{
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+.letter:before{
+    color: #fff;
+    text-shadow:
+        -1px 0px 1px rgba(255,255,255,.8),
+        1px 0px 1px rgba(0,0,0,.8);
+    z-index: 3;
+    -webkit-transform: rotateX(0deg) rotateY(-15deg) rotateZ(0deg);
+    -moz-transform: rotateX(0deg) rotateY(-15deg) rotateZ(0deg);
+    -ms-transform: rotateX(0deg) rotateY(-15deg) rotateZ(0deg);
+    -o-transform: rotateX(0deg) rotateY(-15deg) rotateZ(0deg);
+    transform: rotateX(0deg) rotateY(-15deg) rotateZ(0deg);
+}
+.letter:after{
+    color: rgba(0,0,0,.11);
+    z-index:2;
+    -webkit-transform: scale(1.08,1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg,1deg);
+    -moz-transform: scale(1.08,1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg,1deg);
+    -ms-transform: scale(1.08,1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg,1deg);
+    -o-transform: scale(1.08,1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg,1deg);
+    transform: scale(1.08,1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg,1deg);
+}
+.letter:hover:before{
+    color: #fafafa;
+    opacity: 0.9;
+    -webkit-transform: rotateX(0deg) rotateY(-40deg) rotateZ(0deg);
+    -moz-transform: rotateX(0deg) rotateY(-40deg) rotateZ(0deg);
+    -ms-transform: rotateX(0deg) rotateY(-40deg) rotateZ(0deg);
+    -o-transform: rotateX(0deg) rotateY(-40deg) rotateZ(0deg);
+    transform: rotateX(0deg) rotateY(-40deg) rotateZ(0deg);
+}
+.letter:hover:after{
+    -webkit-transform: scale(1.08,1) rotateX(0deg) rotateY(40deg) rotateZ(0deg) skew(0deg,22deg);
+    -moz-transform: scale(1.08,1) rotateX(0deg) rotateY(40deg) rotateZ(0deg) skew(0deg,22deg);
+    -ms-transform: scale(1.08,1) rotateX(0deg) rotateY(40deg) rotateZ(0deg) skew(0deg,22deg);
+    -o-transform: scale(1.08,1) rotateX(0deg) rotateY(40deg) rotateZ(0deg) skew(0deg,22deg);
+    transform: scale(1.08,1) rotateX(0deg) rotateY(40deg) rotateZ(0deg) skew(0deg,22deg);
+}
+
+/*iPhone 2G-4S in portrait & landscape*/
+@media only screen and (min-device-widt 320px) and (max-device-width: 480px) {
+    .yuri {
+        top: 10%;
+        margin-top: 0;
+        line-height: 4em;
+    }
+}
+
+/*iPhone 5 in portrait & landscape*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
+    .yuri {
+        top: 15%;
+        margin-top: 0;
+        line-height: 4em;
+    }
+}
+
+/*iPhone 5 in landscape*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+}
+
+/*iPhone 5 in portrait*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+}
