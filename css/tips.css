@@ -1,0 +1,163 @@
+/**
+* CSS3 Tips
+*
+* A stylesheet for creating tooltips without using anything other than CSS3.
+*
+* created by c.bavota
+* released under GPL v2
+*
+* November 6th, 2013
+*/
+[data-tips] {
+    position: relative;
+    text-decoration: none;
+}
+[data-tips]:after,
+[data-tips]:before {
+    position: absolute;
+    z-index: 100;
+    opacity: 0;
+}
+[data-tips]:after {
+    content: attr(data-tips);
+    height: 25px;
+    line-height: 25px;
+    padding: 0 10px;
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+    background: #000;
+    border-radius: 3px;
+    font-weight: 200;
+    letter-spacing: .5px;
+    font-family: Helvetica;
+    text-shadow: none;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    white-space: nowrap;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+[data-tips]:before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-width: 6px;
+    border-style: solid;
+}
+[data-tips]:hover:after,
+[data-tips]:hover:before {
+    opacity: 1;
+}
+
+/* Top tips */
+[data-tips].top-tip:after,
+[data-tips].top-tip:before {
+    -webkit-transition: bottom 0.25s ease-in-out, opacity 0.25s ease-in-out;
+    -moz-transition: bottom 0.25s ease-in-out, opacity 0.25s ease-in-out;
+    transition: bottom 0.25s ease-in-out, opacity 0.25s ease-in-out;
+    bottom: 90%;
+    left: -9999px;
+    margin-bottom: 12px;
+}
+[data-tips].top-tip:before {
+    border-color: #222 transparent transparent transparent;
+    margin-bottom: 0;
+}
+[data-tips].top-tip:hover:after,
+[data-tips].top-tip:hover:before {
+    bottom: 100%;
+    left: 0;
+}
+[data-tips].top-tip:hover:before {
+    left: 15px;
+}
+
+/* Bottom tip */
+[data-tips].bottom-tip:after,
+[data-tips].bottom-tip:before {
+    -webkit-transition: top 0.25s ease-in-out, opacity 0.25s ease-in-out;
+    -moz-transition: top 0.25s ease-in-out, opacity 0.25s ease-in-out;
+    transition: top 0.25s ease-in-out, opacity 0.25s ease-in-out;
+    top: 90%;
+    left: -9999px;
+    margin-top: 12px;
+}
+[data-tips].bottom-tip:before {
+    border-color: transparent transparent rgba(0,0,0,1) transparent;
+    margin-top: 0;
+}
+[data-tips].bottom-tip:hover:after,
+[data-tips].bottom-tip:hover:before {
+    top: 100%;
+    left: 0;
+}
+[data-tips].bottom-tip:hover:before {
+    left: 15px;
+}
+
+/*Custom*/
+.instagram [data-tips].bottom-tip:before {
+    border-bottom-color: #b6775c;
+}
+
+.instagram [data-tips]:after {
+    background-color: #b6775c;
+    color: #fff;
+}
+
+.linkedin [data-tips].bottom-tip:before {
+    border-bottom-color: #246ba6;
+}
+
+.linkedin [data-tips]:after {
+    background-color: #246ba6;
+    color: #fff;
+}
+
+.twitter [data-tips].bottom-tip:before {
+    border-bottom-color: #55acee;
+}
+
+.twitter [data-tips]:after {
+    background-color: #55acee;
+    color: #fff;
+}
+
+.flickr [data-tips].bottom-tip:before {
+    border-bottom-color: #ff0084;
+}
+
+.flickr [data-tips]:after {
+    background-color: #ff0084;
+    color: #fff;
+}
+
+.github [data-tips].bottom-tip:before {
+    border-bottom-color: #333;
+}
+
+.github [data-tips]:after {
+    background-color: #333;
+    color: #fff;
+}
+
+.youtube [data-tips].bottom-tip:before {
+    border-bottom-color: #cc181e;
+}
+
+.youtube [data-tips]:after {
+    background-color: #cc181e;
+    color: #fff;
+}
+
+.facebook [data-tips].bottom-tip:before {
+    border-bottom-color: #425f9c;
+}
+
+.facebook [data-tips]:after {
+    background-color: #425f9c;
+    color: #fff;
+}
