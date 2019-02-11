@@ -8,21 +8,26 @@
 body{
     font-family: 'Lato', sans-serif;
     background: #f1f1f1;
+    margin: 0;
+    padding: 0;
 }
 .yuri{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 80%;
-    height: 150px;
-    margin: -100px 0 0 -40%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    height: 99vh;
 }
 .letter{
     display: inline-block;
     font-weight: 900;
-    font-size: 8em;
-    margin: 0.1em;
+    font-size: 10vw;
+    margin: 1vw;
     position: relative;
     color: #f12800;
     -webkit-transform-style: preserve-3d;
@@ -116,28 +121,11 @@ body{
     transform: scale(1.08,1) rotateX(0deg) rotateY(40deg) rotateZ(0deg) skew(0deg,22deg);
 }
 
-/*iPhone 2G-4S in portrait & landscape*/
-@media only screen and (min-device-widt 320px) and (max-device-width: 480px) {
+@media only screen and (max-width: 768px) {
     .yuri {
-        top: 10%;
-        margin-top: 0;
-        line-height: 4em;
+        height: 90vh;
     }
-}
-
-/*iPhone 5 in portrait & landscape*/
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) {
-    .yuri {
-        top: 15%;
-        margin-top: 0;
-        line-height: 4em;
+    .letter {
+        font-size: 12vh;
     }
-}
-
-/*iPhone 5 in landscape*/
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
-}
-
-/*iPhone 5 in portrait*/
-@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
 }

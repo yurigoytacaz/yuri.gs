@@ -98,6 +98,10 @@
     left: 15px;
 }
 
+[data-tips].bottom-tip:hover:after {
+    left: -15px;
+}
+
 /*Custom*/
 .instagram [data-tips].bottom-tip:before {
     border-bottom-color: #b6775c;
